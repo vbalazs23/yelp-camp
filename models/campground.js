@@ -42,13 +42,26 @@ const CampgroundSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Review'
     }
-]
+],
+    time : { type : Number, default: Date.now() }
 }, opts);
 
 CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
     return `
     <strong><a href="/campgrounds/${this._id}">${this.title}</a></strong>
     <p>${this.description.substring(0, 20)}...`;
+ });
+
+ CampgroundSchema.virtual('sinceCreated').get(function () {
+    if (Date.now() - this.time <= 86400000) {
+        return "Created today"
+    
+    } else if (Date.now() - this.time > 86400000 && Date.now() - this.time <= 172800000) {
+        return  "Created Yesterday"
+    } else {
+        const date = Date.now() - this.time
+        return `Created ${date / 86,400,000} days ago`
+    }
  });
 
 CampgroundSchema.post('findOneAndDelete', async function (doc) {

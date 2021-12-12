@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/stars.css">
 
 <div class="row">
-    <div class="col-6">
+    <div class="col-md-6">
       <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
       <% campground.images.forEach((img, i) => { %>
@@ -41,11 +41,11 @@
             </div>
             <% } %> 
             <div class="card-footer text-muted">
-                2 days ago
+                <%= campground.sinceCreated %> 
               </div>
           </div>        
     </div>
-    <div class="col-6">
+    <div class="col-md-6">
       <div id='map'></div>
       <% if(currentUser && !campground.author.equals(currentUser._id)) { %> 
       <h2>Leave a Review</h2>
@@ -97,9 +97,9 @@
 <script>
   const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
   const campground = <%-JSON.stringify(campground)%>;
-  
 </script>
 <script src="/javascripts/showPageMap.js"></script>
+
 
 
     
