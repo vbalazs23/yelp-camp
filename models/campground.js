@@ -60,7 +60,7 @@ CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
         return  "Created Yesterday"
     } else {
         const date = Date.now() - this.time
-        return `Created ${date / 86,400,000} days ago`
+        return `Created ${Math.floor(date / 86400000)} days ago`
     }
  });
 
