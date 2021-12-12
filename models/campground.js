@@ -54,10 +54,10 @@ CampgroundSchema.virtual('properties.popUpMarkup').get(function () {
 
  CampgroundSchema.virtual('sinceCreated').get(function () {
     if (Date.now() - this.time <= 86400000) {
-        return "Created today"
+        return "Created less than a day ago"
     
     } else if (Date.now() - this.time > 86400000 && Date.now() - this.time <= 172800000) {
-        return  "Created Yesterday"
+        return  "Created 1 day ago"
     } else {
         const date = Date.now() - this.time
         return `Created ${Math.floor(date / 86400000)} days ago`
