@@ -14,7 +14,7 @@ It uses Node.js, Express and MongoDB for storage.
 - Users can't rate their own campgrounds.
 - Limited the number of pictures users can upload to campgrounds. (If limit is reached upload is disabled with a message shown.)
 - Deleting images from cloudinary when deleting a campground.
-- Fixed an issue with pictures bugging out from the image carousel in the campground show page.
+- Fixed an issue with pictures bugging out from the image carousel on the campground show page.
 - The "Created xy days ago" block in the bottom of the campground card on the campground show page
 shows real data (added an actual counting script)
 - Made the show page responsive.
