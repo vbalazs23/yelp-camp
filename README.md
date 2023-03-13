@@ -18,5 +18,3 @@ It uses Node.js, Express and MongoDB for storage.
 - The "Created xy days ago" block in the bottom of the campground card on the campground show page
 shows real data (added an actual counting script)
 - Made the show page responsive.
-- Created a grid for the campgrounds page instead of a simple list.
-
