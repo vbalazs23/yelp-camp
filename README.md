@@ -1,6 +1,6 @@
 # yelp-camp
 [See it hosted here](https://yelp-camp-d1uk.onrender.com/)<br>
-This was the final, full-stack project of my online web development course. It's inspired by Yelp (hence the name) that has a lot of features.<br>
+This was the final, full-stack project of my online web development course. It's inspired by Yelp (hence the name) and has quite a few features.<br>
 It uses Node.js, Express and MongoDB for storage.
 ### Functionality: 
 - You can create an account.(If you want to try it out, you can use a fake e-mail address, there is no confirmation process)
